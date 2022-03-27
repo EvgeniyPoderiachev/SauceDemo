@@ -5,11 +5,14 @@ import static org.testng.Assert.assertEquals;
 
 public class CheckoutTest extends BaseTest {
 
+    String user = "standard_user";
+    String link = "https://www.saucedemo.com/";
+
 
     @Test
     public void checkout() {
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.cssSelector("input[placeholder=Username]")).sendKeys("standard_user");
+        driver.get(link);
+        driver.findElement(By.cssSelector("input[placeholder=Username]")).sendKeys(user);
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.name("login-button")).click();
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
