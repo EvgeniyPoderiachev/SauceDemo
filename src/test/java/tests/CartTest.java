@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class CartTest extends BaseTest {
 
-    @Test
+    //@Test
     public void productShouldBeAddedIntoCart() {
         loginPage.open();
         loginPage.login("standart_user", "secret_sauce");
